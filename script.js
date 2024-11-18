@@ -1,4 +1,4 @@
-// Array extraño
+// Array corregido 
 const strangeArray = [
   "Zero",
   function () {
@@ -37,6 +37,11 @@ function showList(array) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  // Escribe tu solución aquí
-  // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  const filteredArray = strangeArray
+  .filter((item) => typeof item === "string")
+  .sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+  showList(filteredArray);
+  
 });
+
